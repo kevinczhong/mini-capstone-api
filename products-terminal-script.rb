@@ -1,4 +1,6 @@
 require "http"
+require "tty-table"
+
 puts "Would you like to pull the information for one product, or all products?"
 pref = gets.chomp
 if pref == "all_products"
