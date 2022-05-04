@@ -23,6 +23,22 @@ class ProductsController < ApplicationController
     render json: product.as_json
   end
 
+  def update
+    product = Product.find_by(id: params["id"])
+    # product.name = params["name"]
+    # product.price = params["price"]
+    # product.image_url = params["image_url"]
+    # product.description = params["description"]
+    product.update(
+      name: params["name"] || product.name,
+      price: params["price"] || product.price,
+      image_url: params["image_url"] || product.image_url,
+      description: params["description"] || product.description,
+    )
+    product.save
+    render json: product.as_json
+  end
+
   # def water_bottle
   #   render json: { product: Product.find_by(name: "Water Bottle") }
   # end
