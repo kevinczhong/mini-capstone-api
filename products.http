@@ -1,3 +1,11 @@
-### Products index
+### Products create
 
 POST http://localhost:3000/products
+Content-type: application/json
+
+{
+  "name": "Shirt",
+  "price": 20,
+  "image_url": "placeholder",
+  "description": "A shirt"
+}
