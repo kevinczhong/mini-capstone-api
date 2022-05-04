@@ -9,6 +9,16 @@ class ProductsController < ApplicationController
     render json: product.as_json
   end
 
+  def create
+    product = Product.create(
+      name: "Jacket",
+      price: 49,
+      image_url: "placeholder",
+      description: "A jacket.",
+    )
+    render json: product.as_json
+  end
+
   # def water_bottle
   #   render json: { product: Product.find_by(name: "Water Bottle") }
   # end
