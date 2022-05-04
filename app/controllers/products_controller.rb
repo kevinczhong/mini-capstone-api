@@ -15,6 +15,10 @@ class ProductsController < ApplicationController
       price: params["price"],
       image_url: params["image_url"],
       description: params["description"],
+      # name: "Pants",
+      # price: 20,
+      # image_url: "placeholder",
+      # description: "A pair of pants",
     )
     render json: product.as_json
   end

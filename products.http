@@ -1,11 +1,12 @@
 ### Products create
 
 POST http://localhost:3000/products
+# Non-dynamic: Just run the POST request
 Content-type: application/json
 
 {
-  "name": "Shirt",
-  "price": 20,
+  "name": "Harness",
+  "price": 40,
   "image_url": "placeholder",
-  "description": "A shirt"
+  "description": "A harness"
 }
