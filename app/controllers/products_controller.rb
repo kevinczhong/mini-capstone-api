@@ -15,3 +15,5 @@ class ProductsController < ApplicationController
     render json: { product: Product.find_by(name: "Hiking shoes") }
   end
 end
+
+#Independently specifying methods/paths for individual products seems completely untenable with scale. There has to be a way to automate this.
