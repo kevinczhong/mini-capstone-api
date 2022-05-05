@@ -1,4 +1,7 @@
 require "http"
+
+# INDEX/SHOW
+
 # puts "If you would like the index, please type in index. Else, please type in the id of the product you would like to access the information of."
 # pref = gets.chomp
 # if pref == "index"
@@ -11,13 +14,21 @@ require "http"
 #   pp show
 # end
 
-HTTP.patch(
-  "http://localhost:3000/products/3",
-  params: {
-    "name": "Running Shoes",
-    "price": 79,
-  },
-)
+# UPDATE
+
+# HTTP.patch(
+#   "http://localhost:3000/products/3",
+#   params: {
+#     "name": "Running Shoes",
+#     "price": 79,
+#   },
+# )
+
+# DESTROY
+
+# HTTP.delete()
+
+# DEPRECATED UPDATE METHOD
 
 # puts "Please type in the ID of the item that you would like to update."
 # id = gets.chomp
