@@ -11,7 +11,13 @@ require "http"
 #   pp show
 # end
 
-response = HTTP.patch("http://localhost:3000/products/3")
+HTTP.patch(
+  "http://localhost:3000/products/3",
+  body: {
+    "name": "Hiking Shoes",
+    "price": 89,
+  },
+)
 
 # puts "Please type in the ID of the item that you would like to update."
 # id = gets.chomp
