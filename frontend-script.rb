@@ -13,9 +13,9 @@ require "http"
 
 HTTP.patch(
   "http://localhost:3000/products/3",
-  body: {
-    "name": "Hiking Shoes",
-    "price": 89,
+  params: {
+    "name": "Running Shoes",
+    "price": 79,
   },
 )
 
