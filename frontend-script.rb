@@ -11,12 +11,17 @@ require "http"
 #   pp show
 # end
 
-response = HTTP.get("http://localhost:3000/products/3")
-update = response.parse(:json)
-puts "What would you like to update?"
-pref = gets.chomp
-if pref == "name"
-elsif pref == "price"
-elsif pref == "image_url"
-elsif pref == "description"
-end
+response = HTTP.patch("http://localhost:3000/products/3")
+
+# puts "Please type in the ID of the item that you would like to update."
+# id = gets.chomp
+# puts "What attribute would you like to update?"
+# pref = gets.chomp
+# if pref == "name"
+#   new_name = gets.chomp
+#   product.name = new_name
+#   product.save
+# elsif pref == "price"
+# elsif pref == "image_url"
+# elsif pref == "description"
+# end

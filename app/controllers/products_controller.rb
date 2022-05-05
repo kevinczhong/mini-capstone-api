@@ -39,6 +39,12 @@ class ProductsController < ApplicationController
     render json: product.as_json
   end
 
+  def destroy
+    product = Product.find_by(id: params["id"])
+    product.destroy
+    render json: { message: "This product has been removed from inventory." }
+  end
+
   # def water_bottle
   #   render json: { product: Product.find_by(name: "Water Bottle") }
   # end

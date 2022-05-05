@@ -13,10 +13,10 @@ POST http://localhost:3000/products
 Content-type: application/json
 
 {
-  "name": "Harness",
-  "price": 40,
+  "name": "To be destroyed",
+  "price": 0,
   "image_url": "placeholder",
-  "description": "A harness"
+  "description": "To be destroyed"
 }
 
 ### Products update
@@ -27,3 +27,6 @@ Content-type: application/json
   "name": "Hiking Shoes",
   "price": 89
 }
+
+### Products destroy
+DELETE http://localhost:3000/products/9
