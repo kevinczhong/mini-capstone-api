@@ -25,7 +25,7 @@ class Product < ApplicationRecord
   end
 
   def tax
-    tax = price.to_f * 0.09
+    tax = price * 0.09
     tax = tax.truncate(2)
     return tax
   end
