@@ -1,17 +1,1 @@
-@products.map do |product|
-  {
-  id: product.id,
-  name: product.name,
-  price: product.price,
-  image_url: product.image_url,
-  description: product.description,
-  is_discounted?: product.is_discounted?,
-  is_shoe?: product.is_shoe?,
-  image_todo: product.image_todo,
-  inventory: product.inventory,
-  tax: product.tax,
-  total: product.total,
-  created_at: product.created_at,
-  updated_at: product.updated_at
-  }
-end
+render partial: "products/products", collection: @products, as: :product
