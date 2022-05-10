@@ -8,6 +8,7 @@
   is_discounted?: product.is_discounted?,
   is_shoe?: product.is_shoe?,
   image_todo: product.image_todo,
+  inventory: product.inventory,
   tax: product.tax,
   total: product.total,
   created_at: product.created_at,
