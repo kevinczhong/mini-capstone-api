@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    product = Product.create(
+    product = Product.new(
       name: params["name"],
       price: params["price"],
       image_url: params["image_url"],
@@ -21,8 +21,12 @@ class ProductsController < ApplicationController
       # image_url: "placeholder",
       # description: "A pair of pants",
     )
-    @product = product
-    render template: "products/show"
+    if product.save
+      @product = product
+      render template: "products/show"
+    else
+      render json: { error_message: product.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -37,9 +41,12 @@ class ProductsController < ApplicationController
       image_url: params["image_url"] || product.image_url,
       description: params["description"] || product.description,
     )
-    product.save
-    @product = product
-    render json: product.as_json
+    if product.save
+      @product = product
+      render template: "products/show"
+    else
+      render json: { error_message: product.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def destroy
