@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Product.create(name: "Water Bottle", price: "4.99", image_url: "placeholder", description: "A water bottle")
-Product.create(name: "Backpack", price: "29.99", image_url: "placeholder", description: "A backpack")
-Product.create(name: "Hiking shoes", price: "99.99", image_url: "placeholder", description: "A pair of hiking shoes")
+# Product.create(name: "Water Bottle", price: "4.99", image_url: "placeholder", description: "A water bottle")
+# Product.create(name: "Backpack", price: "29.99", image_url: "placeholder", description: "A backpack")
+# Product.create(name: "Hiking shoes", price: "99.99", image_url: "placeholder", description: "A pair of hiking shoes")
+
+Supplier.create(name: "Shoe Company Ltd", email: "shoecompany@shoes.com", phone_number: "1234567890")
+Supplier.create(name: "Outdoors Utility Inc", email: "outdoors@outu.com", phone_number: "2345678901")

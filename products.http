@@ -29,4 +29,4 @@ Content-type: application/json
 }
 
 ### Products destroy
-DELETE http://localhost:3000/products/9.json
+DELETE http://localhost:3000/products/10.json
