@@ -1,12 +1,12 @@
 class SuppliersController < ApplicationController
   def index
-    suppliers = Supplier.all
-    render json: suppliers.as_json
+    @suppliers = Supplier.all
+    render template: "suppliers/index"
   end
 
   def show
-    supplier = Supplier.find_by(id: params[:id])
-    render json: supplier.as_json
+    @supplier = Supplier.find_by(id: params[:id])
+    render template: "suppliers/show"
   end
 
   def create
@@ -15,7 +15,7 @@ class SuppliersController < ApplicationController
       email: params[:email],
       phone_number: params[:phone_number],
     )
-    render json: supplier.as_json
+    render template: "suppliers/show"
   end
 
   def update
@@ -26,7 +26,7 @@ class SuppliersController < ApplicationController
       phone_number: params[:phone_number] || supplier.phone_number,
     )
     supplier.save
-    render json: supplier.as_json
+    render template: "suppliers/show"
   end
 
   def destroy
