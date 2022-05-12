@@ -12,6 +12,7 @@
   total: product.total,
   supplier_id: product.supplier_id,
   supplier: product.supplier,
+  images: product.images,
   created_at: product.created_at,
   updated_at: product.updated_at,
 }

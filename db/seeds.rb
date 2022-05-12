@@ -12,3 +12,10 @@
 
 # Supplier.create(name: "Shoe Company Ltd", email: "shoecompany@shoes.com", phone_number: "1234567890")
 # Supplier.create(name: "Outdoors Utility Inc", email: "outdoors@outu.com", phone_number: "2345678901")
+
+product_id = 1
+8.times do
+  Image.create(image_url: "placeholder", product_id: product_id)
+  Image.create(image_url: "placeholder", product_id: product_id)
+  product_id += 1
+end
