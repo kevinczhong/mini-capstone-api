@@ -17,4 +17,9 @@ Rails.application.routes.draw do
   # get "/water_bottle", controller: "products", action: "water_bottle"
   # get "/backpack", controller: "products", action: "backpack"
   # get "/hiking_shoes", controller: "products", action: "hiking_shoes"
+  get "/images", controller: "images", action: "index"
+  get "/images/:id", controller: "images", action: "show"
+  post "/images", controller: "images", action: "create"
+  patch "/images/:id", controller: "images", action: "update"
+  delete "/images/:id", controller: "images", action: "destroy"
 end

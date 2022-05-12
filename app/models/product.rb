@@ -24,13 +24,13 @@ class Product < ApplicationRecord
     end
   end
 
-  def image_todo
-    if image_url == "placeholder"
-      return "This product still needs an image."
-    else
-      return "Image ready."
-    end
-  end
+  # def image_todo
+  #   if image_url == "placeholder"
+  #     return "This product still needs an image."
+  #   else
+  #     return "Image ready."
+  #   end
+  # end
 
   def tax
     tax = price * 0.09
