@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   validates :name, presence: true
-  # validates :name, uniqueness: true
+  validates :name, uniqueness: true
   validates :price, presence: true
   validates :price, numericality: { only_decimal: true }
   validates :price, comparison: { greater_than_or_equal_to: 0 }
@@ -41,5 +41,9 @@ class Product < ApplicationRecord
   def total
     total = price + tax
     return total
+  end
+
+  def supplier
+    Supplier.find_by(id: supplier_id)
   end
 end
