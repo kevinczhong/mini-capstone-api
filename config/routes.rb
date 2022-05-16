@@ -22,4 +22,7 @@ Rails.application.routes.draw do
   post "/images", controller: "images", action: "create"
   patch "/images/:id", controller: "images", action: "update"
   delete "/images/:id", controller: "images", action: "destroy"
+
+  post "/users" => "users#create"
+  post "/sessions" => "sessions#create"
 end
