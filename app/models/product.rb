@@ -6,8 +6,9 @@ class Product < ApplicationRecord
   validates :price, comparison: { greater_than_or_equal_to: 0 }
   validates :description, presence: true
   validates :description, length: { in: 10..500 }
-  # belongs_to :supplier
-  # has_many :images
+  belongs_to :supplier
+  belongs_to :order
+  has_many :images
 
   def is_discounted?
     if price < 10
@@ -45,9 +46,9 @@ class Product < ApplicationRecord
     return total
   end
 
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
+  # def supplier
+  #   Supplier.find_by(id: supplier_id)
+  # end
 
   def images
     Image.where(product_id: id)
