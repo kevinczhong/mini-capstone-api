@@ -1,0 +1,17 @@
+### ORDERS INDEX
+GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MTk5ODd9.EGPPmXVPUmFv84iDJTCuJpQAMtHpVRy0WUtbaBWg5R8 
+
+### ORDERS SHOW
+GET http://localhost:3000/orders/3.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MTk5ODd9.EGPPmXVPUmFv84iDJTCuJpQAMtHpVRy0WUtbaBWg5R8 
+
+### ORDER CREATE
+POST http://localhost:3000/orders.json 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MTk5ODd9.EGPPmXVPUmFv84iDJTCuJpQAMtHpVRy0WUtbaBWg5R8
+
+{
+  "product_id": 3,
+  "quantity": 2
+}

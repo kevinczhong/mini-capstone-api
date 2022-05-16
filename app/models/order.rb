@@ -1,4 +1,13 @@
 class Order < ApplicationRecord
   belongs_to :user
-  has_many :products
+  belongs_to :product
+
+  # def subtotal
+  # end
+
+  # def tax
+  # end
+
+  # def total
+  # end
 end
