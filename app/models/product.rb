@@ -8,7 +8,9 @@ class Product < ApplicationRecord
   validates :description, length: { in: 10..500 }
   belongs_to :supplier
   has_many :orders
+  has_many :category_products
   has_many :images
+  has_many :categories, through: :category_products
 
   def is_discounted?
     if price < 10
@@ -52,5 +54,9 @@ class Product < ApplicationRecord
 
   # def images
   #   Image.where(product_id: id)
+  # end
+  # def categories
+  #   categories_array = category_products.map { |category_product| category_product.category }
+  #   return categories_array
   # end
 end
