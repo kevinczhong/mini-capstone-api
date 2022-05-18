@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MTk5ODd9.EGPPmXVPUmFv84iDJTCuJpQAMtHpVRy0WUtbaBWg5R8
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI5MDcxNzF9.vmIlqdzCii49Xrj7ProM91MIw4PdkUSM-EWuNnj0HgA
 @contentType = application/json
 
 ### ORDERS INDEX
