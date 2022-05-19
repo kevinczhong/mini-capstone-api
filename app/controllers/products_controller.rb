@@ -3,7 +3,10 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    pp current_user
+    if params["category"]
+      category = Category.find_by(name: params["category"])
+      @products = category.products
+    end
     render template: "products/index"
   end
 
