@@ -1,0 +1,6 @@
+@carted_products.map do |carted_product|
+  {
+    id: carted_product.id,
+    url: carted_product_url(carted_product, format: :json)
+  }
+end

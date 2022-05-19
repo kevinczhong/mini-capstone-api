@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI5MDcxNzF9.vmIlqdzCii49Xrj7ProM91MIw4PdkUSM-EWuNnj0HgA
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTMwNjg0NDZ9.1O1cPQ-1Kfef8m4N4rVKV_6QLi_E97e69VR6v9rfyus
 @contentType = application/json
 
 ### ORDERS INDEX
@@ -11,10 +11,4 @@ Authorization: Bearer {{jwt}}
 
 ### ORDER CREATE
 POST http://localhost:3000/orders.json 
-Content-Type: {{contentType}}
 Authorization: Bearer {{jwt}}
-
-{
-  "product_id": 3,
-  "quantity": 2
-}
