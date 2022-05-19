@@ -1,7 +1,7 @@
 class CartedProductsController < ApplicationController
   def index
     carted_products = CartedProduct.where(status: "carted")
-    render json: carted_products.as_json
+    render template: "carted_products/index"
   end
 
   def create
