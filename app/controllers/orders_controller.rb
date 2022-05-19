@@ -4,12 +4,14 @@ class OrdersController < ApplicationController
   def index
     @orders = User.find_by(id: current_user.id).orders
     render template: "orders/index"
+    # render json: orders.as_json
   end
 
   def show
     orders = User.find_by(id: current_user.id).orders
     @order = orders.find_by(id: params["id"])
     render template: "orders/show"
+    # render json: order.as_json
   end
 
   def create
