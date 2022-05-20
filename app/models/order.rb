@@ -1,6 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :user
   has_many :carted_products
+  has_many :products, through: :carted_products
 
   # def user
   #   user = User.find_by(id: user_id)

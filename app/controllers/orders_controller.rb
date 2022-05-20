@@ -23,8 +23,8 @@ class OrdersController < ApplicationController
       product = Product.find_by(id: carted_product[:product_id])
       subtotal += product.price * carted_product[:quantity]
       tax += product.tax * carted_product[:quantity]
-      total += subtotal + tax
     end
+    total = subtotal + tax
     order = Order.new(
       user_id: current_user.id,
       subtotal: subtotal,

@@ -17,5 +17,5 @@ Authorization: Bearer {{jwt}}
 }
 
 ### DESTROY
-DELETE http://localhost:3000/carted_products/16.json
+DELETE http://localhost:3000/carted_products/40.json
 Authorization: Bearer {{jwt}}
