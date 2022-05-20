@@ -12,7 +12,7 @@ class CartedProductsController < ApplicationController
       status: "carted",
       order_id: nil,
     )
-    carted_product.save
+    @carted_product.save
     render template: "carted_products/index"
   end
 
