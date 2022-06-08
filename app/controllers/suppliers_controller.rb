@@ -15,7 +15,6 @@ class SuppliersController < ApplicationController
       email: params[:email],
       phone_number: params[:phone_number],
     )
-    render template: "suppliers/show"
   end
 
   def update
@@ -26,7 +25,6 @@ class SuppliersController < ApplicationController
       phone_number: params[:phone_number] || supplier.phone_number,
     )
     supplier.save
-    render template: "suppliers/show"
   end
 
   def destroy

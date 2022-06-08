@@ -29,4 +29,4 @@ Content-type: application/json
 }
 
 ### Suppliers destroy
-DELETE http://localhost:3000/suppliers/10.json
+DELETE http://localhost:3000/suppliers/3.json

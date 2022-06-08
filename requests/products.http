@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTMwNjg0NDZ9.1O1cPQ-1Kfef8m4N4rVKV_6QLi_E97e69VR6v9rfyus
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE2NTQ4MDAyOTN9.xCLfVgjVoy3G2QkvI9CpIwNpyGZ4kFDA7Bo55vzqFuM
 
 ### Products index
 
@@ -15,17 +15,20 @@ GET http://localhost:3000/products/3.json
 POST http://localhost:3000/products.json
 # Non-dynamic: Just run the POST request
 Content-type: application/json
+Authorization: Bearer {{jwt}}
 
 {
   "name": "To be destroyed",
-  "price": -40,
+  "price": 40,
   "image_url": "placeholder",
-  "description": "To be destroyed"
+  "description": "To be destroyed",
+  "supplier_id": 1
 }
 
 ### Products update
-PATCH http://localhost:3000/products/3.json
+PATCH http://localhost:3000/products/4.json
 Content-type: application/json
+Authorization: Bearer {{jwt}}
 
 {
   "name": "Hiking Shoes",
@@ -33,4 +36,5 @@ Content-type: application/json
 }
 
 ### Products destroy
-DELETE http://localhost:3000/products/10.json
+DELETE http://localhost:3000/products/4.json
+Authorization: Bearer {{jwt}}

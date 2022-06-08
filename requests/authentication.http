@@ -3,10 +3,11 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test name 1",
-  "email": "test1@test.com",
+  "name": "admin",
+  "email": "admin@test.com",
   "password": "password",
-  "password_confirmation": "password"
+  "password_confirmation": "password",
+  "admin": true
 }
 
 ### Sessions create (login)
@@ -14,6 +15,6 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "admin@test.com",
   "password": "password"
 }
