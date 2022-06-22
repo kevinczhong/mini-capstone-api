@@ -3,6 +3,21 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    if params[:sort]
+      if params[:sort_order]
+        @products = Product.all.order("#{params[:sort]} #{params[:sort_order]}")
+      else
+        @products = Product.all.order("#{params[:sort]}")
+      end
+    else
+      @products = Product.all.order("id")
+    end
+    if params[:discount]
+      @products = Product.where("price < ?", params[:discount])
+    end
+    if params[:search]
+      @products = Product.where(name: params[:search])
+    end
     if params["category"]
       category = Category.find_by(name: params["category"])
       @products = category.products

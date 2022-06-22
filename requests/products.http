@@ -2,7 +2,7 @@
 
 ### Products index
 
-GET http://localhost:3000/products.json?category=Shoes
+GET http://localhost:3000/products.json
 Authorization: Bearer {{jwt}}
 
 
